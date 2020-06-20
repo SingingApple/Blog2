@@ -1,0 +1,21 @@
+<%- include ('partials/header.ejs') %>
+
+<div class="row" style="margin-top: 10px;">
+  <div class="col s12 m10 push-m1">
+    <div class="card z-depth-1">
+      <div class="card-content black-text">
+        <span class="card-title center"><%= post.title %></span>
+        <p class="left valign-wrapper"><%=post.description%></p>
+      </div>
+      <div class="card-action">
+        <a href="/posts" class="btn blue">All Posts</a>
+        <form action="/posts/<%=post.id%>?_method=DELETE" method="POST">
+          <button class="btn red" type="submit">Delete</button>
+        </form>
+        <a href="/posts/edit/<%=post.id%>">Edit </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer')%>

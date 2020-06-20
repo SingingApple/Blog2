@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col s12">
+    <form class="col s12" method="POST" action="/posts">
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea
+                name="title"
+                id="title"
+                value="<%= post.title %>"
+                placeholder="Title"
+                class="materialize-textarea"
+              >
+<%=post.title %></textarea
+              >
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">article</i>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Body"
+                class="materialize-textarea"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="card-action">
+          <button type="submit" class="btn red">Submit</button>
+          <a href="/posts" class="btn blue">Index</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include("partials/footer.ejs") %>
